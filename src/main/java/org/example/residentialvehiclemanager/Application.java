@@ -1,17 +1,52 @@
 package org.example.residentialvehiclemanager;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Application {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import org.example.residentialvehiclemanager.database.DatabaseManager;
+import org.example.residentialvehiclemanager.controller.AuthenticationController;
+import org.example.residentialvehiclemanager.view.LoginFrame;
+import org.example.residentialvehiclemanager.view.MainFrame;
+import javax.swing.*;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+/**
+ * Clase Main - Punto de entrada de la aplicación
+ * Inicializa la base de datos y muestra la ventana de login
+ */
+public class Application {
+    public static void main(String[] args) {
+        // Configurar Look & Feel
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            System.err.println("Error al configurar Look & Feel: " + e.getMessage());
         }
+
+        // Inicializar en EDT (Event Dispatch Thread)
+        SwingUtilities.invokeLater(() -> {
+            try {
+                System.out.println("╔════════════════════════════════════════════════════╗");
+                System.out.println("║  Sistema de Gestión de Vehículos Residencial      ║");
+                System.out.println("║  Versión 1.0.0                                    ║");
+                System.out.println("╚════════════════════════════════════════════════════╝");
+                System.out.println();
+
+                // Inicializar base de datos
+                System.out.println("Inicializando sistema...");
+                DatabaseManager dbManager = DatabaseManager.getInstance();
+                System.out.println("✓ Base de datos lista");
+
+                // Mostrar ventana de login
+                new LoginFrame(() -> {
+                    SwingUtilities.invokeLater(MainFrame::new);
+                });
+
+            } catch (Exception e) {
+                System.err.println("✗ Error fatal al iniciar la aplicación: " + e.getMessage());
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null,
+                        "Error al iniciar la aplicación:\n" + e.getMessage(),
+                        "Error Fatal",
+                        JOptionPane.ERROR_MESSAGE);
+                System.exit(1);
+            }
+        });
     }
 }
