@@ -24,17 +24,37 @@ public class Inmueble {
     }
 
     // Getters y Setters
-    public int getIdInmueble() { return idInmueble; }
-    public void setIdInmueble(int idInmueble) { this.idInmueble = idInmueble; }
+    public int getIdInmueble() {
+        return idInmueble;
+    }
 
-    public String getNumeroApartamento() { return numeroApartamento; }
-    public void setNumeroApartamento(String numeroApartamento) { this.numeroApartamento = numeroApartamento; }
+    public void setIdInmueble(int idInmueble) {
+        this.idInmueble = idInmueble;
+    }
 
-    public int getIdTorre() { return idTorre; }
-    public void setIdTorre(int idTorre) { this.idTorre = idTorre; }
+    public String getNumeroApartamento() {
+        return numeroApartamento;
+    }
 
-    public LocalDateTime getFechaCreacion() { return fechaCreacion; }
-    public void setFechaCreacion(LocalDateTime fechaCreacion) { this.fechaCreacion = fechaCreacion; }
+    public void setNumeroApartamento(String numeroApartamento) {
+        this.numeroApartamento = numeroApartamento;
+    }
+
+    public int getIdTorre() {
+        return idTorre;
+    }
+
+    public void setIdTorre(int idTorre) {
+        this.idTorre = idTorre;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
 
     @Override
     public String toString() {

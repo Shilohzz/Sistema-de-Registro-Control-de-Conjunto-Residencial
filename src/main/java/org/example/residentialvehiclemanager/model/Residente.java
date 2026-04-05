@@ -36,26 +36,61 @@ public class Residente {
     }
 
     // Getters y Setters
-    public int getIdResidente() { return idResidente; }
-    public void setIdResidente(int idResidente) { this.idResidente = idResidente; }
+    public int getIdResidente() {
+        return idResidente;
+    }
 
-    public String getNombresCompletos() { return nombresCompletos; }
-    public void setNombresCompletos(String nombresCompletos) { this.nombresCompletos = nombresCompletos; }
+    public void setIdResidente(int idResidente) {
+        this.idResidente = idResidente;
+    }
 
-    public String getTelefono() { return telefono; }
-    public void setTelefono(String telefono) { this.telefono = telefono; }
+    public String getNombresCompletos() {
+        return nombresCompletos;
+    }
 
-    public String getCorreoElectronico() { return correoElectronico; }
-    public void setCorreoElectronico(String correoElectronico) { this.correoElectronico = correoElectronico; }
+    public void setNombresCompletos(String nombresCompletos) {
+        this.nombresCompletos = nombresCompletos;
+    }
 
-    public String getTipoVinculo() { return tipoVinculo; }
-    public void setTipoVinculo(String tipoVinculo) { this.tipoVinculo = tipoVinculo; }
+    public String getTelefono() {
+        return telefono;
+    }
 
-    public int getIdInmueble() { return idInmueble; }
-    public void setIdInmueble(int idInmueble) { this.idInmueble = idInmueble; }
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
 
-    public LocalDateTime getFechaCreacion() { return fechaCreacion; }
-    public void setFechaCreacion(LocalDateTime fechaCreacion) { this.fechaCreacion = fechaCreacion; }
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public String getTipoVinculo() {
+        return tipoVinculo;
+    }
+
+    public void setTipoVinculo(String tipoVinculo) {
+        this.tipoVinculo = tipoVinculo;
+    }
+
+    public int getIdInmueble() {
+        return idInmueble;
+    }
+
+    public void setIdInmueble(int idInmueble) {
+        this.idInmueble = idInmueble;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
 
     @Override
     public String toString() {

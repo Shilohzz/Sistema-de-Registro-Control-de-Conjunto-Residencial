@@ -21,14 +21,29 @@ public class Torre {
     }
 
     // Getters y Setters
-    public int getIdTorre() { return idTorre; }
-    public void setIdTorre(int idTorre) { this.idTorre = idTorre; }
+    public int getIdTorre() {
+        return idTorre;
+    }
 
-    public String getNombreTorre() { return nombreTorre; }
-    public void setNombreTorre(String nombreTorre) { this.nombreTorre = nombreTorre; }
+    public void setIdTorre(int idTorre) {
+        this.idTorre = idTorre;
+    }
 
-    public LocalDateTime getFechaCreacion() { return fechaCreacion; }
-    public void setFechaCreacion(LocalDateTime fechaCreacion) { this.fechaCreacion = fechaCreacion; }
+    public String getNombreTorre() {
+        return nombreTorre;
+    }
+
+    public void setNombreTorre(String nombreTorre) {
+        this.nombreTorre = nombreTorre;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
 
     @Override
     public String toString() {
